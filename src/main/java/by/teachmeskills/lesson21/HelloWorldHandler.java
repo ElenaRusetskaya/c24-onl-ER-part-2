@@ -1,8 +1,8 @@
-package lesson21;
+package by.teachmeskills.lesson21;
 
+import by.teachmeskills.lesson21.util.HttpUtils;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-import lesson21.util.HttpUtils;
 
 import java.io.IOException;
 import java.io.OutputStream;
