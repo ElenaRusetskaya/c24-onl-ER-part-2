@@ -1,4 +1,4 @@
-package lesson21.util;
+package by.teachmeskills.lesson21.util;
 
 import java.util.Arrays;
 import java.util.Map;
