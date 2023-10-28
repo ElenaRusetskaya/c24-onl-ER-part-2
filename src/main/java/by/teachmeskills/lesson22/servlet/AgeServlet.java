@@ -14,13 +14,15 @@ import java.io.IOException;
 @WebServlet(urlPatterns = {"/age"})
 public class AgeServlet extends HttpServlet
 {
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         int age = 0;
         try {
             age = Integer.parseInt(request.getParameter("age")); }
         catch (NumberFormatException exception) {
-            response.getWriter().println(age >= 18 ? "Adult" : "Minor");
+            response.getWriter().println("Age is not set");
+            return;
         }
+        String abultOrMonor = age >= 18 ? "Adult" : "Minor";
+        response.getWriter().println(abultOrMonor);
     }
 }
