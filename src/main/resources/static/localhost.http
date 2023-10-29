@@ -1,0 +1,9 @@
+GET http://localhost:8080
+###
+GET http://localhost:8080/c24_onl_part2_war_exploded/minsk
+###
+GET http://localhost:8080/c24_onl_part2_war_exploded/chicago
+###
+GET http://localhost:8080/c24_onl_part2_war_exploded/shanghai
+###
+GET http://localhost:8080/c24_onl_part2_war_exploded/age?age
