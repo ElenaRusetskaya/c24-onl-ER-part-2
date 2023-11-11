@@ -1,6 +1,6 @@
 package by.teachmeskills.lesson26.servlet;
 
-import by.teachmeskills.lesson26.service.Parameter;
+import by.teachmeskills.lesson26.service.ParameterValidator;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet("/save-request")
-public class SaveRequest extends HttpServlet {
+public class SaveRequestServlet extends HttpServlet {
     /**
      * Создать страницу save-request.jsp, содержащую форму для ввода заявки. Форма должна
      * отправлять данные в POST запросе сервлету, который их проверяет. Если одно из полей
@@ -23,7 +23,7 @@ public class SaveRequest extends HttpServlet {
         String age = request.getParameter("age");
         String gender = request.getParameter("gender");
         String education = request.getParameter("education");
-        if (Parameter.parameters (name, age, gender, education)) {
+        if (ParameterValidator.parameters (name, age, gender, education)) {
             request.setAttribute("message", "One of the fields is not specified correctly");
             request.getServletContext().getRequestDispatcher("/WEB-INF/save-request.jsp").forward(request, response);
         }
