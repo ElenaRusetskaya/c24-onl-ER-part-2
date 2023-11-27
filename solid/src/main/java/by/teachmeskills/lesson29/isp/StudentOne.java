@@ -1,4 +1,4 @@
-package by.teachmeskills.lesson29.ispDip;
+package by.teachmeskills.lesson29.isp;
 
 public class StudentOne implements Сharacteristic {
     @Override

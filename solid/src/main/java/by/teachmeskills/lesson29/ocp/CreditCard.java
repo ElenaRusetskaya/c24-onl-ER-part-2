@@ -1,9 +1,9 @@
 package by.teachmeskills.lesson29.ocp;
 public class CreditCard {
-    public void CreditCard (Operation operation) {
-        if (operation == null) {
-            throw new IllegalArgumentException("Can not operation");
+    public String getClassofocation (Classification classification) {
+        if (classification == null) {
+            throw new IllegalArgumentException("Something went wrong");
         }
-        operation.operation();
+        return classification.getClassification();
     }
 }
