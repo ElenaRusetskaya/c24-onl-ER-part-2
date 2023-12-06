@@ -47,4 +47,8 @@ public class Student {
     public String toString() {
         return "Student:" + "Name -  " + name + ", Course - " + course +", Group - " + group;
     }
+    @Override
+    public Student clone() throws CloneNotSupportedException {
+        return (Student) super.clone();
+    }
 }
