@@ -7,7 +7,7 @@ import java.time.ZoneId;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
-public class TimeServlet implements Controller {
+public class TimeDispatcher implements Controller {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
         return "TimeServlet";

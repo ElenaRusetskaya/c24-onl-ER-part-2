@@ -4,7 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-public class AgeServlet implements Controller {
+public class AgeDispatcher implements Controller {
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
         return "AgeServlet";

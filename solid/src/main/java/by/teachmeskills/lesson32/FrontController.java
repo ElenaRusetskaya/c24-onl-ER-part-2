@@ -14,9 +14,9 @@ public class FrontController extends HttpServlet {
         String frontController = request.getParameter("frontController");
         Controller interfaceFC = null;
         if ("Age".equals(frontController)) {
-            interfaceFC = new AgeServlet();
+            interfaceFC = new AgeDispatcher();
         } else {
-            interfaceFC = new TimeServlet();
+            interfaceFC = new TimeDispatcher();
         }
         String controller = interfaceFC.execute(request, response);
         request.getRequestDispatcher(controller+ ".jsp").forward(request, response);
