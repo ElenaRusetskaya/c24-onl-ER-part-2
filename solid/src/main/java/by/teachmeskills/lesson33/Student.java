@@ -1,27 +1,17 @@
 package by.teachmeskills.lesson33;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
 public class Student {
     private String name;
     private int course;
     private String group;
-    public String getName() {
-        return name;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public int getCourse() {
-        return course;
-    }
-    public void setCourse(int course) {
-        this.course = course;
-    }
-    public String getGroup() {
-        return group;
-    }
-    public void setGroup(String group) {
-        this.group = group;
-    }
+
     @Override
     public boolean equals(Object object) {
         if (object == this) {
