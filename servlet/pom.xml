@@ -13,15 +13,42 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
         <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
+
+        <lombok.version>1.18.28</lombok.version>
+        <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
+        <logback.version>1.4.11</logback.version>
+        <junit.version>3.8.1</junit.version>
     </properties>
 
     <dependencies>
         <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>5.10.0</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>${javax.servlet-api.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
         </dependency>
     </dependencies>
 
@@ -35,5 +62,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
