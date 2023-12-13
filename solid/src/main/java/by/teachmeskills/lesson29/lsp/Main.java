@@ -12,8 +12,6 @@ public class Main {
         int figurePerimeter = calculator.calculatePerimeter(figure);
         int trianglePerimeter = calculator.calculatePerimeter(triangle);
 
-        //System.out.println("Shape area: " + figurePerimeter);
-        //System.out.println("Triangle area: " + trianglePerimeter);
         LOGGER.info("Shape area: " + figurePerimeter);
         LOGGER.info("Triangle area: " + trianglePerimeter);
     }

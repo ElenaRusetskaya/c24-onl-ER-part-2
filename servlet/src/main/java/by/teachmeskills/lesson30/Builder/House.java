@@ -12,8 +12,6 @@ public class House {
         number1.setNumber(1).setNumberOfRooms(2).setFloor("101");
         number2.setNumber(2).setNumberOfRooms(3).setFloor("102");
 
-        //System.out.println(number1);
-        //System.out.println(number2);
         LOGGER.info(String.valueOf(number1));
         LOGGER.info(String.valueOf(number2));
     }
