@@ -12,6 +12,7 @@
     <modules>
         <module>servlet</module>
         <module>solid</module>
+        <module>spring</module>
     </modules>
 
 </project>

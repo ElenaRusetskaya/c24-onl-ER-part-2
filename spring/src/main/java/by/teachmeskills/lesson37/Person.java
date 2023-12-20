@@ -11,6 +11,6 @@ public class Person {
     }
     @Override
     public String toString() {
-        return "Person [Name=" + name + ", Year=" + year + "]";
+        return "Person: Name - " + name + ", Year - " + year;
     }
 }
