@@ -15,7 +15,7 @@ public class UserService {
         return jdbcTemplate.query("select * from users", new BeanPropertyRowMapper<>(User.class));
     }
     public User getOne(String email) {
-        return jdbcTemplate.query("select * from users where email = ?", new Object[] { email },
+        return jdbcTemplate.query("select * from users where email = ?",
                 new BeanPropertyRowMapper<>(User.class)).stream().findAny().orElse(null);
     }
     public void add(User user) {
