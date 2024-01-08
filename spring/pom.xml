@@ -17,20 +17,25 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven-war-plugin.version>3.4.0</maven-war-plugin.version>
 
-        <javax.servlet-api.version>4.0.1</javax.servlet-api.version>
         <lombok.version>1.18.30</lombok.version>
         <mysql-connector-java.version>8.0.33</mysql-connector-java.version>
         <jackson-databind.version>2.15.1</jackson-databind.version>
         <slf4j-simple.version>2.0.7</slf4j-simple.version>
-        <spring-context.version>6.0.11</spring-context.version>
+        <spring.version>5.3.27</spring.version>
+        <hibernate-validator.version>6.2.5.Final</hibernate-validator.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>${javax.servlet-api.version}</version>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>6.0.0</version>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>6.0.11</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -54,9 +59,20 @@
             <version>${slf4j-simple.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.microsoft.sqlserver</groupId>
+            <artifactId>mssql-jdbc</artifactId>
+            <version>12.2.0.jre11</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate-validator.version}</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-            <version>${spring-context.version}</version>
+            <artifactId>spring-jdbc</artifactId>
+            <version>6.0.11</version>
         </dependency>
     </dependencies>
 
