@@ -19,7 +19,7 @@ public class MainController {
     private UserValidator userValidator;
     @GetMapping("/view/{name}")
     public String view(@PathVariable("name") String name, Model model) {
-        model.addAttribute("msg", "Hello " + name);
+        model.addAttribute("", "Hello " + name);
         return "/index";
     }
     @GetMapping("/users")
