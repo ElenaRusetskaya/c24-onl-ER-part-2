@@ -4,6 +4,6 @@
 </head>
 <body>
 <ul>
-    <li>${user.name} ${user.surname} ${user.email}</li>
+    <li>${user.name} ${user.password} ${user.email}</li>
 </ul>
 </html>

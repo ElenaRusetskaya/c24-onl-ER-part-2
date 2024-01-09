@@ -8,9 +8,9 @@
         <input path="name"/>
         <errors path="name"/>
     </div>
-    <label path="surname">Surname</label>
-    <input path="surname"/>
-    <errors path="surname"/>
+    <label path="password">Password</label>
+    <input path="password"/>
+    <errors path="password"/>
     <div>
         <label path="email">Email</label>
         <input path="email"/>

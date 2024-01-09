@@ -19,6 +19,6 @@ public class UserService {
                 new BeanPropertyRowMapper<>(User.class)).stream().findAny().orElse(null);
     }
     public void add(User user) {
-        jdbcTemplate.update("insert into users values(?, ?, ?)", user.getName(), user.getSurname(), user.getEmail());
+        jdbcTemplate.update("insert into users values(?, ?, ?)", user.getName(), user.getPassword(), user.getEmail());
     }
 }

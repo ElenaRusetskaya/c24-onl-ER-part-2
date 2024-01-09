@@ -28,7 +28,7 @@ public class MainController {
         return "/users";
     }
     @PostMapping("/users/new")
-    public String signUp(@ModelAttribute @Valid User user, BindingResult result) {
+    public String registration(@ModelAttribute @Valid User user, BindingResult result) {
         userValidator.validate(user, result);
         if (result.hasErrors()) {
             return "/registration";
