@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HelloWorldController {
-    @GetMapping("/newModule")
+    @GetMapping("/user")
     public String helloNewModule() {
         return "user";
     }
