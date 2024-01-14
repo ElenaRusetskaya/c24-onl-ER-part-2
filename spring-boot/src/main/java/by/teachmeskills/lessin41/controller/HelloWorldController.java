@@ -9,10 +9,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class HelloWorldController {
-    @GetMapping("/user/{name}")
-    public String view(@PathVariable("name") String name, Model model) {
-        model.addAttribute("", "Hello " + name);
-        return "/user";
+    @GetMapping("/user")
+    public String user() {
+        return "user";
     }
     @PostMapping("/helloSpringBoot")
     public String helloSpringBoot(@RequestParam String newModule, Model model) {
