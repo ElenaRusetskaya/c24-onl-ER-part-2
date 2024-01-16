@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 @RequestMapping("/student")
 public class StudentController {
-    @GetMapping("")
+    @GetMapping
     public String toStudent(Model model) {
         model.addAttribute("name", "Bob");
         model.addAttribute("group", "101");
