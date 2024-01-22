@@ -1,7 +1,7 @@
 package by.teachmeskills.lesson40.controller;
 
+import by.teachmeskills.lesson40.dto.UserDto;
 import by.teachmeskills.lesson40.service.UserService;
-import by.teachmeskills.lesson40.model.User;
 import by.teachmeskills.lesson40.util.UserValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -28,12 +28,12 @@ public class MainController {
         return "/users";
     }
     @PostMapping("/users/new")
-    public String registration(@ModelAttribute @Valid User user, BindingResult result) {
-        userValidator.validate(user, result);
+    public String registration(@ModelAttribute @Valid UserDto userDto, BindingResult result) {
+        userValidator.validate(userDto, result);
         if (result.hasErrors()) {
             return "/registration";
         }
-        userService.add(user);
+        userService.add(userDto);
         return "redirect:/users";
     }
 }
