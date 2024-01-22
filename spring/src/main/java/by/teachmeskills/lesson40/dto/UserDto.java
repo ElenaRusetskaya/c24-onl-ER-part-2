@@ -17,16 +17,11 @@ public class UserDto {
 
     @NotNull
     @NotBlank
-    @Size(max = 10)
     private String name;
-
     @NotNull
     @NotBlank
-    @Size(max = 10)
     private String password;
-
     @NotNull
     @NotBlank
-    @Size(max = 10)
     private String email;
 }
