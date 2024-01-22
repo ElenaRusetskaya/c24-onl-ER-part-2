@@ -2,13 +2,11 @@ package by.teachmeskills.lesson40.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import lombok.experimental.Accessors;
 
 @Entity
 @Table(name = "users")
 @Getter
 @Setter
-@Accessors(chain = true)
 @NoArgsConstructor
 @AllArgsConstructor
 public class User {
