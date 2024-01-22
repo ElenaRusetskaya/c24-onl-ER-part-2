@@ -30,10 +30,10 @@ public class DatabaseConfig {
     @Bean
     public DataSource dataSource() {
         BasicDataSource dataSource = new BasicDataSource();
-        dataSource.setDriverClassName("org.mysql.Driver");
-        dataSource.setUrl("jdbc:mysql://localhost:5432/mysql");
-        dataSource.setUsername("mysql");
-        dataSource.setPassword("mysql");
+        dataSource.setDriverClassName("com.mysql.jdbc.Driver");
+        dataSource.setUrl("jdbc:mysql://localhost:3306");
+        dataSource.setUsername("user");
+        dataSource.setPassword("12345");
         return dataSource;
     }
     @Bean
