@@ -29,4 +29,13 @@ public class UserDto {
     @NotBlank
     @Size(min = 5, max = 10)
     private String email;
+
+    private byte[] studentPicture;
+
+    public UserDto(UserDto userDto) {
+        this.name = userDto.name;
+        this.password = userDto.password;
+        this.email = userDto.email;
+        this.studentPicture = userDto.studentPicture;
+    }
 }
