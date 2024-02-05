@@ -1,4 +1,4 @@
-package by.teachmeskills.lessin41;
+package by.teachmeskills.lesson41;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
