@@ -1,7 +1,6 @@
 package by.teachmeskills.lesson40.service;
 
 import by.teachmeskills.lesson40.dto.UserDto;
-import by.teachmeskills.lesson40.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
