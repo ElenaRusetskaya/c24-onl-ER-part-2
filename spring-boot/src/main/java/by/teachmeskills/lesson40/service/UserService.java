@@ -14,12 +14,12 @@ import java.util.List;
 public class UserService {
     @Autowired
     private JdbcTemplate jdbcTemplate;
-    public List<UserRepository> getAll() {
-        return jdbcTemplate.query("select * from users", new BeanPropertyRowMapper<>(UserRepository.class));
+    public List<UserDto> getAll() {
+        return jdbcTemplate.query("select * from users", new BeanPropertyRowMapper<>(UserDto.class));
     }
-    public UserRepository getOne(String email) {
+    public UserDto getOne(String email) {
         return jdbcTemplate.query("select * from users where email = ?",
-                new BeanPropertyRowMapper<>(UserRepository.class)).stream().findAny().orElse(null);
+                new BeanPropertyRowMapper<>(UserDto.class)).stream().findAny().orElse(null);
     }
     public void add(@Valid UserDto userDto) {
         jdbcTemplate.update("select * from users", userDto.getName(), userDto.getPassword(), userDto.getEmail());
