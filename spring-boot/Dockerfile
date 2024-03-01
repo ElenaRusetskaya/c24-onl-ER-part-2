@@ -1,6 +1,6 @@
 FROM openjdk:17-slim
 
-COPY ./target/spring.jar /app/
+COPY ./target/spring-boot.jar /app/
 WORKDIR /app
 
-CMD ["java", "-jar", "spring.jar"]
+CMD ["java", "-jar", "spring-boot.jar"]
