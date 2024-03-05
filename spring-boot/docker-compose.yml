@@ -1,0 +1,30 @@
+version: '3.3'
+services:
+  app:
+    build:
+      context: .
+    container_name: spring-boot
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/spring-boot
+      - SPRING_DATASOURCE_USERNAME=lena
+      - SPRING_DATASOURCE_PASSWORD=qweqwe
+    depends_on:
+      - db
+    ports:
+      - '8080:8080'
+
+  db:
+    image: postgres:15.3-alpine
+    container_name: postgres_15
+    restart: always
+    environment:
+      - POSTGRES_DB=spring-boot
+      - POSTGRES_USER=lena
+      - POSTGRES_PASSWORD=qweqwe
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+
+volumes:
+  postgres-data:
